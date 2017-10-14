@@ -8,12 +8,12 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(express.static(path.resolve(__dirname, '../build')));
 
 // because we're using create react app we have to serve index.html from build file
 // I skip playing with proxies but I'll suggest do that because you're spending your time for waiting to npm run build whenever you change something
 // on the client side
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + './../build/index.html'));
 });

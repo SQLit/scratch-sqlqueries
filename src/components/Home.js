@@ -7,18 +7,18 @@ class Home extends React.Component {
     constructor() {
         super()
         this.state = {
-            query: '', 
+            query: '',
             result: []
         }
 
         // it looks like binding with arrow functions in create-react-app (btw. I hate crp!) is not working so we
-        // need to bind our functions here 
+        // need to bind our functions here
         // there is a better way to create state in homepage and pass it like props here, but .... xD
         this.handleKeyPress = this.handleKeyPress.bind(this)
         this.onQueryChange = this.onQueryChange.bind(this)
     }
 
-    // 
+    //
     onQueryChange(e) {
         const value = e.target.value;
         this.setState(state => ({ query: value }))
@@ -64,7 +64,7 @@ class Home extends React.Component {
                 <br />
                 Clue 2: Find all languages in the Netherlands where the percentage is less than 1
                 <br />
-                Clue 3: Find cities in Europe where country name is Netherlands 
+                Clue 3: Find cities in Europe where country name is Netherlands
                 <br />
                 <input type='text' className='queryInput' placeholder='Enter Query' value={this.state.query} onChange={this.onQueryChange} onKeyPress={this.handleKeyPress}></input>
                 <div>
