@@ -100,10 +100,7 @@ create table country(
 ​
 ## Built With
 ​
-*Frontend*
 - React
-​
-*Backend*
 - Posgres DB
 - Node (Express)
 ​
