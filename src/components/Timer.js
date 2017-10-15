@@ -26,6 +26,7 @@ export default class LinearProgressExampleDeterminate extends React.Component {
   progress(completed) {
     if (completed < 0) {
       this.setState({completed: 0});
+      alert("You Lose!");
     } else {
       this.setState({completed});
       this.timer = setTimeout(() => this.progress(completed - 5), 1000);
@@ -40,4 +41,3 @@ export default class LinearProgressExampleDeterminate extends React.Component {
     );
   }
 }
-
